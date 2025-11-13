@@ -24,7 +24,6 @@ def upload_file (file_path):
 
         # Obtenha o número de páginas
         num_paginas = len(leitor_pdf.pages)
-        # print(leitor_pdf.pages[0].extract_text())
 
         # Itere sobre cada página e extraia o texto
         for numero_pagina in range(num_paginas):
@@ -33,8 +32,7 @@ def upload_file (file_path):
             texto = pagina.extract_text()
             file += texto
 
-
-    fileText = file.replace('...', "").replace("  ", "")[1:700000]
+    fileText = file.replace('...', "").replace("  ", "")[1:300000]
     
     return fileText
 
